@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Login & Register</title>
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side (Login) -->
+        <div class="side_panel">
+            <h2>Welcome Back!</h2>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="toggle-btn"><a href="../html/login.html" style="text-decoration: none; color:white">SIGN IN</a></button>
+        </div>
+
+        <!-- Right Side (Register & Login Form) -->
+        <div class="form_container">
+            <div id="register">
+                <h2>Create Account</h2>
+                <div class="social-icons">
+                    <button class="social-btn">f</button>
+                    <button class="social-btn">G+</button>
+                    <button class="social-btn">in</button>
+                </div>
+                <p>or use your email for registration:</p>
+                <input type="text" id="regUsername" placeholder="Name" class="neumorphic_input">
+                <input type="email" id="regEmail" placeholder="Email" class="neumorphic_input">
+
+                <div class="password-container">
+                    <input type="password" id="regPassword" placeholder="Password" class="neumorphic_input">
+                    <span class="toggle-password" onclick="togglePassword('regPassword')">👁️</span>
+                </div>
+
+                <button class="neumorphic_button" onclick="registerUser()">SIGN UP</button>
+            </div>
+
+            <div id="login" class="hidden">
+                <h2>Login</h2>
+                <input type="email" id="loginEmail" placeholder="Email" class="neumorphic-input">
+
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Password" class="neumorphic-input">
+                    <span class="toggle-password" onclick="togglePassword('loginPassword')">👁️</span>
+                </div>
+
+                <button class="neumorphic-button" onclick="loginUser()">LOGIN</button>
+                <p>Don't have an account? <a href="#" onclick="toggleForm('register')">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>

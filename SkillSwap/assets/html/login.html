@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Login & Register</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Side (Login) -->
+        <div class="side_panel">
+            <h2>Welcome Back!</h2>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="toggle-btn"><a href="../html/signup.html" style="text-decoration: none; color:white">SIGN UP</a></button>
+        </div>
+        <div class="form_container">
+            <div id="login">
+                <h2>Login</h2>
+                <div class="content">
+                    <input type="email" id="loginEmail" placeholder="Email" class="neumorphic_input">
+
+                    <div class="password_container">
+                        <input type="password" id="loginPassword" placeholder="Password" class="neumorphic_input">
+                        <span class="toggle-password" onclick="togglePassword('loginPassword')">👁️</span>
+                    </div>
+
+                    <button class="neumorphic_button" onclick="loginUser()">LOGIN</button>
+                    <p>Don't have an account? <a href="../html/signup.html"
+                            onclick="toggleForm('register')">Register</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2><img src="/images/logo-removebg-preview.png">SkillSwap</h2>
+            <ul>
+                <li><a href="#">🏠 Dashboard</a></li>
+                <li><a href="../html/skill-matching.html">🔍 Skill Matching</a></li>
+                <li><a href="../html/messaging.html">💬 Messages</a></li>
+                <li><a href="../html/events.html">📅 Events</a></li>
+                <li><a href="#">⚙️ Settings</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Welcome, <span id="user-name">User</span></h1> <!-- Updated span for name -->
+                <div class="left">
+                    <div class="profile">    
+                        <img src="/images/images-removebg-preview.png" alt="Profile" id="profile-img">
+                        <div class="dropdown-menu" id="dropdown-menu">
+                            <img src="/images/images-removebg-preview.png" alt="User Profile">
+                            <h2 id="user-profile-name">User</h2> <!-- Updated ID for clarity -->
+                            <p id="skills" style="padding: 5px;"><b>Skills:</b> Web Development, Graphic Design</p>
+                            <p id="interests" style="padding: 5px;"><b>Interested in:</b> Photography, Digital Marketing</p>
+                            <button onclick="editProfile()">Edit Profile</button>
+                        </div>
+                    </div>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </header>
+            
+            
+            <section class="dashboard-widgets">
+                <div class="widget">
+                    <h3>Skill Matches</h3>
+                    <p>3 new matches found!</p>
+                </div>
+                <div class="widget">
+                    <h3>Messages</h3>
+                    <p>2 new messages</p>
+                </div>
+                <div class="widget">
+                    <h3>Upcoming Events</h3>
+                    <p>Join a workshop on Web Development</p>
+                </div>
+            </section>
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="title">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <h3>Ongoing</h3>
+                    </div>
+                        <p>6</p>
+                </div>
+                <div class="stat-card">
+                    <div class="title">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3>Complete</h3>
+                    </div>
+                    <p>35</p>
+                </div>
+                <div class="stat-card">
+                    <div class="title">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Certificate</h3>
+                    </div>
+                    <p>28</p>
+                </div>
+                <div class="stat-card">
+                    <div class="title">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>Hours Spent</h3>
+                    </div>
+                    <p>607</p>
+                </div>
+            </section>
+            <section class="popular-courses">
+                <h2>Popular Courses</h2>
+                <div class="courses">
+                    <div class="course-card">
+                        <div class="img">
+                            <img src="/images/ai.jpeg" alt="AI">
+                        </div>
+                        <p>AI & ML Essentials</p>
+                        <button><a href="">Learn <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                    <div class="course-card"> 
+                        <div class="img">
+                            <img src="/images/graphic.png" alt="AI">
+                        </div>
+                        <p>Graphic Design Masterclass</p>
+                        <button><a href="">Learn <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                    <div class="course-card"> 
+                        <div class="img">
+                            <img src="/images/app.jpeg" alt="AI">
+                        </div>
+                        <p>Mobile App Development</p>
+                        <button><a href="">Learn <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                    <div class="course-card"> 
+                        <div class="img">
+                            <img src="/images/web.jpg" alt="AI">
+                        </div>
+                        <p>Web Development</p>
+                        <button><a href="">Learn <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="course-progress">
+                <h2>My Courses</h2>
+                <div class="progress-list">
+                    <div class="progress-item">
+                        <p>Web Design</p> <progress value="80" max="100"></progress>
+                    </div>
+                    <div class="progress-item">
+                        <p>Data Science</p> <progress value="60" max="100"></progress>
+                    </div>
+                    <div class="progress-item">
+                        <p>Python Programming</p> <progress value="40" max="100"></progress>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/dashboard.js" defer></script>
+    <script>
+        // Function to load user details from localStorage
+        function loadUserData() {
+            let storedName = localStorage.getItem("userName") || "User";
+            let storedSkills = localStorage.getItem("userSkills") || "Web Development, Graphic Design";
+            let storedInterests = localStorage.getItem("userInterests") || "Photography, Digital Marketing";
+    
+            // Update name in both header and profile dropdown
+            document.getElementById("user-name").textContent = storedName; 
+            document.getElementById("user-profile-name").textContent = storedName;
+            document.getElementById("skills").textContent = "Skills: " + storedSkills;
+            document.getElementById("interests").textContent = "Interested in: " + storedInterests;
+        }
+    
+        // Function to edit and update user details
+        function editProfile() {
+            let newName = prompt("Enter your name:", localStorage.getItem("userName") || "");
+            let newSkills = prompt("Enter your skills (comma-separated):", localStorage.getItem("userSkills") || "");
+            let newInterests = prompt("Enter your interests (comma-separated):", localStorage.getItem("userInterests") || "");
+    
+            if (newName) {
+                localStorage.setItem("userName", newName);
+                document.getElementById("user-name").textContent = newName;  // Updates header
+                document.getElementById("user-profile-name").textContent = newName;  // Updates profile
+            }
+            if (newSkills) {
+                localStorage.setItem("userSkills", newSkills);
+                document.getElementById("skills").textContent = "Skills: " + newSkills;
+            }
+            if (newInterests) {
+                localStorage.setItem("userInterests", newInterests);
+                document.getElementById("interests").textContent = "Interested in: " + newInterests;
+            }
+        }
+    
+        // Load user data when the page loads
+        window.onload = loadUserData;
+    </script>
+
+</body>
+
+</html>

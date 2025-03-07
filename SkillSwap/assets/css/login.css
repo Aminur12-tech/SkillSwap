@@ -1,0 +1,302 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #F1F8E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Split Container */
+.container {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px #BEC3C9, -5px -5px 10px #FFFFFF;
+}
+
+
+/* Left Panel (Login Side) */
+.container .side_panel {
+    position: relative;
+    background: #4CAF50;
+    color: white;
+    width: 40%;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side_panel h2 {
+    margin-bottom: 15px;
+}
+
+.side_panel button a{
+    text-decoration: none;
+}
+.toggle-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: white;
+    color: #4CAF50;
+}
+
+/* Right Panel (Form Side) */
+.form_container {
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/SkillSwap Frontend/images/logo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+    padding: 40px;
+    text-align: center;
+}
+.form_container h2{
+    position: relative;
+    top: 46px;
+}
+.content{
+    position: relative;
+    top: 45px;
+}
+/* Neumorphic Inputs */
+.neumorphic_input {
+    position: relative;
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: #E0E5EC;
+    box-shadow: inset 5px 5px 10px #BEC3C9, inset -5px -5px 10px #FFFFFF;
+    font-size: 16px;
+    padding-right: 40px;
+}
+
+/* Neumorphic Button */
+.neumorphic_button {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #4CAF50;
+    box-shadow: 5px 5px 10px #BEC3C9, -5px -5px 10px #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.neumorphic_button:active {
+    box-shadow: inset 5px 5px 10px #BEC3C9, inset -5px -5px 10px #FFFFFF;
+}
+
+/* Password Container */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 31px;
+    top: 44%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+
+/* Hide Forms */
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width:750px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        height: 90vh;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px #BEC3C9, -5px -5px 10px #FFFFFF;
+    }  
+    .container .side_panel {
+        background: #4CAF50;
+        color: white;
+        width: 90%;
+        height: 20vh;
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle-btn {
+        display: none;
+    }
+    .form_container {
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/SkillSwap Frontend/images/logo.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 90%;
+        height: 70vh;
+        padding: 30px;
+        padding-top: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form_container h2{
+        position: relative;
+        top: 26px;
+    }
+    .content{
+        position: relative;
+        top: 25px;
+    }
+    .neumorphic_input {
+        width: 60%;
+        height: 1vh;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+        background: #E0E5EC;
+        box-shadow: inset 5px 5px 10px #BEC3C9, inset -5px -5px 10px #FFFFFF;
+        font-size: 16px;
+        padding-right: 40px;
+    }
+    .neumorphic_button {
+        width: 50%;
+        height: 5vh;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: #4CAF50;
+        box-shadow: 5px 5px 10px #BEC3C9, -5px -5px 10px #FFFFFF;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        color: #ffffff;
+        margin-top: 10px;
+    }
+    .toggle-password {
+        position: absolute;
+        right: 36px;
+        top: 41%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 18px;
+        color: #666;
+    }
+}
+@media screen and (max-width:375px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        height: 90vh;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px #BEC3C9, -5px -5px 10px #FFFFFF;
+    }  
+    .container .side_panel {
+        background: #4CAF50;
+        color: white;
+        width: 90%;
+        height: 20vh;
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle-btn {
+        display: none;
+    }
+    .form_container {
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/SkillSwap Frontend/images/logo.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 90%;
+        height: 70vh;
+        padding: 30px;
+        padding-top: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form_container h2{
+        position: relative;
+        top: 26px;
+    }
+    .content{
+        position: relative;
+        top: 25px;
+    }
+    .neumorphic_input {
+        width: 60%;
+        height: 1vh;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+        background: #E0E5EC;
+        box-shadow: inset 5px 5px 10px #BEC3C9, inset -5px -5px 10px #FFFFFF;
+        font-size: 16px;
+        padding-right: 40px;
+    }
+    .neumorphic_button {
+        width: 50%;
+        height: 5vh;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: #4CAF50;
+        box-shadow: 5px 5px 10px #BEC3C9, -5px -5px 10px #FFFFFF;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        color: #ffffff;
+        margin-top: 10px;
+    }
+    .toggle-password {
+        position: relative;
+        right: 36px;
+        top: 41%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 18px;
+        color: #666;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Matching - SkillSwap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/matching.css">
+</head>
+
+<body>
+    <div class="skill_dashboard">
+        <aside class="sidebar">
+            <h2><img src="/images/logo-removebg-preview.png">SkillSwap</h2>
+            <ul>
+                <li><a href="../html/dashboard.html">🏠 Dashboard</a></li>
+                <li><a href="../html/skill-matching.html">🔍 Skill Matching</a></li>
+                <li><a href="../html/messaging.html">💬 Messages</a></li>
+                <li><a href="../html/events.html">📅 Events</a></li>
+                <li><a href="#">⚙️ Settings</a></li>
+            </ul>
+        </aside>
+        <div class="matching-container">
+            <div class="container">
+                <h1>Find Skill Matches</h1>
+                <input type="text" placeholder="Search skills..." id="search">
+            </div>
+            <div class="user-list">
+                <div class="list-border">
+                    <div class="user-card">
+                        <div class="image">
+                            <img src="/images/images.jpeg" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Jane Smith</h3>
+                            <p><b>Offers:</b> Photography</p>
+                            <p><b>Wants:</b> Web Development</p>
+                        </div>
+                        <button><a href="../html/Learning/learn-jane.html">Learn <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                    <div class="user-card">
+                        <div class="image">
+                            <img src="/images/images.jpeg" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Michael Lee</h3>
+                            <p><b>Offers:</b> Digital Marketing</p>
+                            <p><b>Wants:</b> Graphic Design</p>
+                        </div>
+                        <button><a href="../html/Learning/learn-michael.html">Learn <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                    <div class="user-card">
+                        <div class="image">
+                            <img src="/images/images.jpeg" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Arham k</h3>
+                            <p><b>Offers:</b> Data Science</p>
+                            <p><b>Wants:</b> Web Development</p>
+                        </div>
+                        <button><a href="../html/Learning/learn-arham.html">Learn <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/matching.js"></script>
+</body>
+
+</html>

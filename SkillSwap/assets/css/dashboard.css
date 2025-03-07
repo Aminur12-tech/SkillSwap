@@ -1,0 +1,326 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #1dd469;
+    --muted-green: #8BA88E;
+    --soft-orange: #F9C784;
+    --bright-orange: #E77C3D;
+    --light-sage: #D6E5D0;
+    --soft-green: #F1F8E9;
+    --dark-grey: #263238;
+    --white: #FFFFFF;
+    --pale-green: #B4C8AC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--soft-green);
+}
+
+.dashboard-container{
+    width: 100%;
+    display: flex;
+    background: linear-gradient(60deg, #7354f7, #2c7df7);
+    padding: 10px;
+}
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    width: 250px;
+    color: var(--white);    
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--white);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sidebar img{
+    width: 50px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding-left: 10px;
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    border-radius: 20px 0px 0px 20px;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.466); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurring effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 20px 0px 0px 20px;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
+/* Main Content */
+.main-content {
+    width: 70%;
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden; /* Hide overflow initially */
+    overflow-y: auto; /* Allow scrolling when content overflows */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+
+header {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background: linear-gradient(60deg, #7354f7, #2c7df7);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px 15px 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -20px;
+    position: fixed;
+    width: 78%;
+    height: 16vh;
+}
+
+header .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.profile img:hover {
+    opacity: 0.8;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    padding: 8px 0;
+    z-index: 10;
+    min-width: 300px;
+    height: 270px;
+    gap: 10px;
+}
+.dropdown-menu button{
+    background-color: #1dd469;
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #f4f4f4;
+}
+
+header img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.logout-btn {
+    background-color: var(--bright-orange);
+    color: var(--white);
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: none;
+    padding: 10px 20px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    
+}
+
+.logout-btn:hover {
+    background-color: var(--soft-orange);
+}
+
+/* Dashboard Widgets */
+.dashboard-widgets {
+    display: flex;
+    gap: 20px;
+    margin-top: 130px;
+    
+}
+
+.widget {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+.widget h3 {
+    color:#2c7df7;
+    margin-bottom: 10px;
+}
+
+.dashboard-stats{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.stat-card{
+    width: 20%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #cbeaf8;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stat-card p{
+    font-size: 25px;
+}
+
+.popular-courses{
+    width: 100%;
+    height: 50vh;
+    padding: 20px;
+}
+
+.courses{
+    width: 100%;
+    height: 35vh;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.course-card{
+    width: 21%;
+    height: 94%;
+    border-radius: 20px;
+    background: linear-gradient(60deg, #7354f7, #2c7df7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+
+}
+.course-card:hover{
+    width: 22%;
+    height: 100%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+.course-card button{
+    width: 130px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    transition: 1ms ease;
+    margin-top: 10px;
+    background-color: #E77C3D;
+    color: white;
+}
+.course-card button:hover{
+    background-color: #F9C784;  
+}
+.course-card button a{
+    text-decoration: none;
+    color: white;
+    transition: 1ms ease;
+}
+.course-card button a:hover{
+    color: black;
+}
+.course-card img{
+    width: 15vw;
+    height: 130px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.progress-list{
+    width: 100%;
+    height: 35vh;
+    padding: 30px;
+}
+.progress-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}

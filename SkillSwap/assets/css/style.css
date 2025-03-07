@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(60deg, #7354f7, #2c7df7);
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(60deg, #7354f7, #2c7df7);
+    padding: 15px;
+    color: white;
+    border-bottom: 2px solid white;
+    align-items: center;
+}
+nav .logo{
+    font-size: 30px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul li{
+    background-color: #69e1ff;
+    width: 80px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li:hover{
+    background-color: #43fd4a;
+}
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(60deg, #7354f7, #2c7df7);
+    color: white;
+}
+
+.hero :nth-child(3){
+    margin-top: 1.5rem;
+    width: 8.5rem;
+    height: 3.5rem;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    
+}
+.hero :nth-child(3) a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.cta-button {
+    background: white;
+    color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.features {
+    text-align: center;
+    padding: 20px 50px 50px 50px ;
+    height: 30vh;
+    width: 91%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media screen and (max-width:762px) {
+    .features {
+        text-align: center;
+        padding: 50px;
+        height: 80vh;
+    }
+    
+    .feature-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+     
+}
+
+@media screen and (max-width:340px) {
+    .features {
+        text-align: center;
+        padding: 50px;
+        height: 90vh;
+    }
+    
+    .feature-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+     
+}
+.feature-card {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
